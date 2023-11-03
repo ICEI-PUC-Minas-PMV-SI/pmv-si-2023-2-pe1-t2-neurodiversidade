@@ -1,0 +1,67 @@
+/* Estilos do rodapé */
+footer {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0BB3D9;
+    color: white;
+    margin-bottom: 0px;
+    flex-wrap: wrap;
+    padding: 30px 5%;
+    gap: 10px;
+    width: 100%;
+}
+
+#nav-rodape {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+#nav-rodape ul {
+    width: 100%;
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(4, auto);
+}
+
+#nav-rodape ul li {
+    display: inline-block;
+}
+
+#nav-rodape ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Responsividade rodape */
+
+@media screen and (max-width: 812px){
+    
+    nav#nav-rodape ul {
+        row-gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: 
+        "rodape__item___1 rodape__item___1 rodape__item___1"
+        "rodape__item___2 rodape__item___3 rodape__item___4";
+    }
+
+    .rodape__item___1 {
+        grid-area: rodape__item___1;
+    }
+
+    .rodape__item___2 {
+        grid-area: rodape__item___2;
+    }
+
+    .rodape__item___3 {
+        grid-area: rodape__item___3;
+    }
+
+    .rodape__item___4 {
+        grid-area: rodape__item___4;
+    }
+
+}

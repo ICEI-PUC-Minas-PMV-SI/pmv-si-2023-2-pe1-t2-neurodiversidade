@@ -1,0 +1,151 @@
+/* Estilo do cabeçalho */
+header {
+    background-color: #0BB3D9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2%;
+    height: 90px;
+}
+
+header div span.hamburgue {
+    display: none;
+}
+
+img {
+    height: 60px;
+}
+
+#nav-cabecalho {
+    width: 60%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#nav-cabecalho ul {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+#nav-cabecalho ul li {
+    padding: 0 0 0 20px;
+}
+
+#nav-cabecalho ul:first-child {
+    padding-left: 0;
+}
+
+#nav-cabecalho ul li a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    padding: 0px;
+}
+
+#nav-cabecalho ul li a:after{
+    content: "";
+    position:absolute;
+    background-color: #C7D941;
+    height: 5px;
+    width: 0;
+    left: 0;
+    border-radius: 10px;
+    bottom: -10px;
+    transition: 0.5s;
+    
+}
+
+#nav-cabecalho ul li a:hover:after{
+    width: 100%;
+    font-size: 1.2em; 
+}
+
+#nav-cabecalho--mobile {
+    display: none;
+}
+
+/* Responsividade cabeçalho */
+
+@media screen and (max-width: 812px) {
+
+    .search-box{
+        display: none;
+    }
+    
+    header div.group--hamburgue__logo {
+        width: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header div.group--hamburgue__logo span.hamburgue {
+        display: inline-block;
+        width: 24px; 
+        font-size: 36px; 
+        margin-bottom: 12px; 
+        margin-right: 30px; 
+        color: #C7D941;
+        cursor: pointer;
+    }
+
+    header div div.logo a img {
+        height: 51px;
+    }
+
+    nav#nav-cabecalho {
+        display: none;
+    }
+
+    nav#nav-cabecalho--mobile {
+        width: 70%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    #nav-cabecalho--mobile ul {
+        width: 70%;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #nav-cabecalho--mobile ul li {
+        padding: 5px;
+    }
+
+    #nav-cabecalho--mobile ul li a {
+        display: none;
+    }
+
+    #nav-cabecalho--mobile ul li label.area__infantil {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        border-radius: 9em;
+        background-color: #C7D941;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    #nav-cabecalho--mobile ul li label.area__infantil span {
+        color: #ffffff;
+        width: 24px;
+        width: auto;
+        font-size: 32px;
+        padding: 0px;
+    }
+
+    #nav-cabecalho--mobile ul li label.area__infantil p {
+        color: #ffffff; 
+    }
+
+    #infantil__2 p {
+        padding: 0 8px;
+    }
+
+    #infantil__3 p {
+        padding: 0 5px;
+    }
+}
